@@ -10,6 +10,7 @@ class Admin_Evaluasi extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('admin/evaluasi/index');
+		$querdy['evaluasi'] = $this->db->query("SELECT * FROM evaluasi LEFT JOIN mahasiswa ON mahasiswa.id=evaluasi.id_mahasiswa")->result();
+		$this->load->view('admin/evaluasi/index',$querdy);
 	}
 }

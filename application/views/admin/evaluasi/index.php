@@ -40,18 +40,23 @@
 						<th>NIM</th>
 						<th>Nama</th>
 						<th>Semester</th>
-						<th>Tanggal Isi Evaluasi</th>
+						
 					
 					</tr>
 				</thead>
 				<tbody>
+				<?php
+										$no = 1;
+										foreach ($evaluasi as $u) { ?>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>	
+						<td><?= $no++ ?></td>
+						<td><?= $u->nim ?></td>
+						<td><?= $u->nama ?></td>
+						<td><?= $u->semester ?></td>
+					
 					</tr>
+					<?php } ?>
+
 
 
 				</tbody>

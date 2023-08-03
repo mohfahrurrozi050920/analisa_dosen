@@ -10,6 +10,7 @@ class Admin_Kuesioner extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('admin/kuesioner/index');
+		$querdy['kuesioner'] = $this->db->query("SELECT * FROM nilai_kuesioner LEFT JOIN mahasiswa ON mahasiswa.id=nilai_kuesioner.id_mahasiswa")->result();
+		$this->load->view('admin/kuesioner/index',$querdy);
 	}
 }

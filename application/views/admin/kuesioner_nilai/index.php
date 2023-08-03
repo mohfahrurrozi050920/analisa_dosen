@@ -23,52 +23,75 @@
 	<!-- Main content -->
 	<section class="content">
 		<div class="container-fluid">
-		<div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header" style="background-color:green;color:#eee">
-                <h3 class="card-title">Data Nilai Kuesioner Penilaian Dosen</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-			<!-- Small boxes (Stat box) -->
-			<div class="table-responsive ">
-			<table id="example" class="display nowrap" style="width:100%">
-				<thead>
-					<tr>
-						<th>NO</th>
-						<th>Nama Dosen</th>
-						<th>Semester</th>
-						<th>Matakuliah</th>
-						<th>Tahun</th>
-						<th>Jumlah Pengisi</th>
-						<th>Jumlah Nilai</th>
-						<th>Nilai Rata Rata</th>
-						<th>Nilai Hurup</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php $no=1; foreach($nilai_kuesioner as $u){ ?>
-					<tr>
-						<td><?= $no++ ?></td>
-						<td><?= $u->nama ?></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header" style="background-color:green;color:#eee">
+							<h3 class="card-title">Data Nilai Kuesioner Penilaian Dosen</h3>
+						</div>
+						<!-- /.card-header -->
+						<div class="card-body">
+							<!-- Small boxes (Stat box) -->
+							<div class="table-responsive ">
+								<table id="example" class="display nowrap" style="width:100%">
+									<thead>
+										<tr>
+											<th>NO</th>
+											<th>Nama </th>
+											<th>Semester</th>
+											<th>Matakuliah</th>
+											<th>Jumlah Pengisi</th>
+											<th>Jumlah Nilai</th>
 
-<?php }?>
-				</tbody>
+											<th>Nilai Hurup</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php $no = 1;
+										foreach ($nilai_kuesioner as $u) { ?>
+											<tr>
+												<td>
+													<?= $no++ ?>
+												</td>
+												<td>
+													<?= $u->nama ?>
+												</td>
+												<td>
+													<?= $u->semester ?>
+												</td>
+												<td>
+													<?= $u->matakuliah ?>
+												</td>
+												<td>
+													<?= $jm_pengisi ?>
+												</td>
 
-			</table>
-			</div>
-			</div>
-			</div>
-			</div>
+												<td>
+													<?= $u->nilai ?>
+												</td>
+
+												<td>
+													<?php
+													if ($u->nilai <= 1) { ?>
+														<span>B</span>
+														
+													<?php } ?>
+													<?php
+													if ($u->nilai > 1) { ?>
+														<span>A</span>
+													<?php } ?>
+
+												</td>
+											</tr>
+
+										<?php } ?>
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- /.row -->

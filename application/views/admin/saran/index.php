@@ -37,24 +37,28 @@
 				<thead>
 					<tr>
 						<th>NO</th>
-						<th>Nama Dosen</th>
+						<th>Nama</th>
 						<th>Matakuliah</th>
 						<th>Semester</th>
-						<th>Tahun Akademik</th>
+						<th>Dosen</th>
 						<th>Saran Dari Mahasiswa Untuk Dosen</th>
 						
 					</tr>
 				</thead>
 				<tbody>
+				<?php
+										$no = 1;
+										foreach ($saran as $u) { ?>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td><?= $no++ ?></td>
+						<td><?= $u->nama  ?></td>
+						<td><?= $u->matakuliah  ?></td>
+						<td><?= $u->semester  ?></td>
+						<td><?= $u->nama_dosen  ?></td>
+						<td><?= $u->saran  ?></td>
 						
 					</tr>
+					<?php } ?>
 
 
 				</tbody>
