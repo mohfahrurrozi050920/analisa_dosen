@@ -108,6 +108,33 @@
             
             </ul>
           </li>
+
+					<li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+             Pernyataan
+                <i class="fas fa-angle-left right"></i>
+             
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url() ?>Admin_Kuesioner/tambah" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> Kuesioner</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url() ?>Admin_Evaluasi/tambah" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+							  <p> Evaluasi</p>
+                </a>
+              </li>
+            
+            
+            </ul>
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
